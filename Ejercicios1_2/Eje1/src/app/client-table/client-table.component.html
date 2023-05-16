@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Client List</h2>
+  <table class="table table-info table-hover">
+    <thead>
+      <tr>
+        <th class="col">Client</th>
+        <th class="col">CIF</th>
+        <th class="col">Address</th>
+        <th class="col">Group</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Client 1</td>
+        <td>B 123</td>
+        <td>C/ la la la</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Cleint 2</td>
+        <td>A 334</td>
+        <td>Av. lo lo lo</td>
+        <td>2</td>
+      </tr>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.name }}</td>
+        <td>{{ client.cif }}</td>
+        <td>{{ client.address }}</td>
+        <td>{{ client.group }}</td>
+      </tr>
+    </tbody>
+    <tr></tr>
+  </table>
+</div>
+

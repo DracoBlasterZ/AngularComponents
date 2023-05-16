@@ -1,0 +1,36 @@
+<div class="container mb-3">
+  <h2 class="mb-3">Contact form</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <div class="col-3 text-center col-form-label"><label for="name" class="form-label">Name:</label></div>
+      <div class="col-9">
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Put your name here">
+        <div *ngIf="nameError" class="text-danger">{{ nameError }}</div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-3 text-center col-form-label"><label for="email" class="form-label">Email:</label></div>
+      <div class="col-9">
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="example@mail.com...">
+        <div *ngIf="emailError" class="text-danger">{{ emailError }}</div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-3 text-center col-form-label"><label for="message" class="form-label">Message</label></div>
+      <div class="col-9">
+        <textarea class="form-control" [(ngModel)]="message" name="message" id="message" rows="4" placeholder="Your message here"></textarea>
+        <div *ngIf="messageError" class="text-danger">{{ messageError }}</div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-3 text-center col-form-label"><label for="robot-check" class="form-label"><b>2 x 3 + 4 = ?</b></label></div>
+      <div class="col-9">
+        <input type="number" name="robot-check" [(ngModel)]="robotCheck" class="form-control" id="robot-check" placeholder="Solve this problem">
+        <div *ngIf="robotCheckError" class="text-danger">{{ robotCheckError }}</div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-12 text-center"><button class="btn btn-primary" type="submit">Send</button></div>
+    </div>
+  </form>
+</div>
